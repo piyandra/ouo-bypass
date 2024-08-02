@@ -9,8 +9,8 @@ def generator(message):
     bot.reply_to(message, "Silahkan Kirim Linknya")
 @bot.message_handler(content_types="text")
 def generator(message):
+    data = bypass.ouo_bypass(message.text)
     try:
-        data = bypass.ouo_bypass(message.text)
         bot.reply_to(message, text=f'<code>{data}</code>', parse_mode="HTML")
     except:
         print(data)
