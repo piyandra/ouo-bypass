@@ -13,6 +13,7 @@ def generator(message):
         data = bypass.ouo_bypass(message.text)
         bot.reply_to(message, text=f'<code>{data}</code>', parse_mode="HTML")
     except:
+        print(data)
         bot.reply_to(message, "Error")
 
 
